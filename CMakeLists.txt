@@ -8,7 +8,7 @@ SET(CMAKE_CXX_STANDARD_REQUIRED)
 SET(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/bin)
 SET(LIBRARY_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/lib)
 
-find_package(CUDAToolkit)
+# find_package(CUDAToolkit REQUIRED)
 find_package(MPI REQUIRED)
 find_package(OpenMP REQUIRED)
 
@@ -17,7 +17,7 @@ include_directories(include
     ${MPI_CXX_INCLUDE_DIRS})
 
 set(LIBS
-    CUDA::cudart	
+    #CUDA::cudart	
     MPI::MPI_CXX
     OpenMP::OpenMP_CXX)
 
