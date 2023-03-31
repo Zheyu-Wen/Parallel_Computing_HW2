@@ -1,8 +1,0 @@
--------- freesurfer-linux-centos7_x86_64-7.3.2-20220804-6354275 --------
-Setting up environment for FreeSurfer/FS-FAST (and FSL)
-FREESURFER_HOME   /work2/08171/zheyw1/frontera/freesurfer/
-FSFAST_HOME       /work2/08171/zheyw1/frontera/freesurfer//fsfast
-FSF_OUTPUT_FORMAT nii.gz
-SUBJECTS_DIR      /work2/08171/zheyw1/frontera/freesurfer//subjects
-MNI_DIR           /work2/08171/zheyw1/frontera/freesurfer//mni
-/var/spool/slurmd/job740822/slurm_script: line 14: 3974623 Floating point exception(core dumped) mpirun -n 3 bin/parscan_main gpu 1D 25

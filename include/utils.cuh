@@ -1,5 +1,5 @@
-#ifndef PARSCAN_CUH
-#define PARSCAN_CUH
+#ifndef UTILS_CUH
+#define UTILS_CUH
 
 #include <mpi.h>
 #include <iostream>
@@ -17,9 +17,7 @@ using namespace std;
 #define milliseconds(x) std::chrono::duration_cast<std::chrono::milliseconds>(x)
 #define seconds(x) std::chrono::duration_cast<std::chrono::seconds>(x)
 
-__global__ void sequential_sum(float* a, float* s, int n);
-float* seq_scan_cuda(float *a, int n);
-void seq_scan_mpicuda(int n, int rank);
-void parscan_mpicuda(int n, int rank);
-float* parscan_cuda(float *a, int n);
-#endif // PARSCAN_CUH
+__global__ void matvec_kernel(float (*L)[114], const boost::array<float, 114>& tau_a, const boost::array<float, 114>& matvec_out);
+void matvec_func(float (*L)[114], float* tau_a, float* matvec_out);
+
+#endif // UTILS_CUH
